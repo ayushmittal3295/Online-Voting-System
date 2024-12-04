@@ -1,0 +1,35 @@
+online-voting-system/
+│
+├── pom.xml
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           ├── controller/
+│   │   │           │   └── VotingController.java
+│   │   │           ├── model/
+│   │   │           │   ├── Candidate.java
+│   │   │           │   ├── Election.java
+│   │   │           │   └── Voter.java
+│   │   │           ├── repository/
+│   │   │           │   ├── CandidateRepository.java
+│   │   │           │   ├── ElectionRepository.java
+│   │   │           │   └── VoterRepository.java
+│   │   │           └── service/
+│   │   │               └── VotingService.java
+│   │   ├── resources/
+│   │   │   ├── application.properties
+│   │   │   └── templates/
+│   │   │       └── index.html
+│   │   └── webapp/
+│   │       ├── WEB-INF/
+│   │       │   └── web.xml
+│   │       └── index.jsp
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── VotingServiceTest.java
+└── target/

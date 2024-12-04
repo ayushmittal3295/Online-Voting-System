@@ -1,0 +1,60 @@
+/* General body styles */
+body {
+    background-color: #f8f9fa; /* Light background color */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+/* Container styles */
+.container {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 30px; /* Padding around the content */
+}
+
+/* Heading styles */
+h2 {
+    color: #007bff; /* Primary color for headings */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Button styles */
+.btn {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Link styles */
+a {
+    color: #007bff; /* Primary color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Invalid feedback styles */
+.invalid-feedback {
+    color: #dc3545; /* Red color for error messages */
+    font-size: 0.875em; /* Smaller font size */
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .container {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller heading on mobile */
+    }
+}
