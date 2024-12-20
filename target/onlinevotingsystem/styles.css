@@ -1,0 +1,31 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+/* styles.css */
+/* ... your base styles ... */
+
+.security-assurance {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.security-assurance img {
+  width: 100px;
+  height: auto;
+}

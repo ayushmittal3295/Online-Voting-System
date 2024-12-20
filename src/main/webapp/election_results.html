@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results - Online Voting System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-custom {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Election Results</h2>
+        <div id="message"></div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3>Compiled Results</h3>
+            </div>
+            <div class="card-body">
+                <div id="compiled_results">
+                    <!-- Compiled results will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Detailed Results</h3>
+            </div>
+            <div class="card-body">
+                <div id="detailed_results">
+                    <!-- Detailed results will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <button id="flush_results" class="btn btn-danger btn-custom mt-4">Flush Results</button>
+    </div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Display success or error message based on URL parameter
+        window.onload = function() {
+            var success = getUrlParameter('success');
+            var messageDiv = document.getElementById('message');
+            if (success === 'true') {
+                messageDiv.innerHTML = '<div class="alert alert-success">Operation completed successfully!</div>';
+            } else if (success === 'false') {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Operation failed. Please try again.</div>';
+            }
+
+            // Fetch and display compiled results
+            fetch('get_compiled_results')
+                .then(response => response.json())
+                .then(data => {
+                    const compiledResultsDiv = document.getElementById('compiled_results');
+                    if (data.length > 0) {
+                        let resultsList = '<ul class="list-group">';
+                        data.forEach(result => {
+                            resultsList += `<li class="list-group-item">Candidate: ${result.candidateName}, Votes: ${result.votes}</li>`;
+                        });
+                        resultsList += '</ul>';
+                        compiledResultsDiv.innerHTML = resultsList;
+                    } else {
+                        compiledResultsDiv.innerHTML = '<p>No results available.</p>';
+                    }
+                })
+                .catch(error => console.error('Error fetching compiled results:', error));
+
+            // Fetch and display detailed results
+            fetch('get_detailed_results')
+                .then(response => response.json())
+                .then(data => {
+                    const detailedResultsDiv = document.getElementById('detailed_results');
+                    if (data.length > 0) {
+                        let resultsList = '<ul class="list-group">';
+                        data.forEach(result => {
+                            resultsList += `<li class="list-group-item">User: ${result.username}, Candidate: ${result.candidateName}</li>`;
+                        });
+                        resultsList += '</ul>';
+                        detailedResultsDiv.innerHTML = resultsList;
+                    } else {
+                        detailedResultsDiv.innerHTML = '<p>No results available.</p>';
+                    }
+                })
+                .catch(error => console.error('Error fetching detailed results:', error));
+
+            // Handle flush results button click
+            document.getElementById('flush_results').onclick = function() {
+                fetch('flush_results', { method: 'POST' })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = 'election_results.html?success=true';
+                        } else {
+                            window.location.href = 'election_results.html?success=false';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error flushing results:', error);
+                        window.location.href = 'election_results.html?success=false';
+                    });
+            };
+        };
+    </script>
+</body>
+</html>
