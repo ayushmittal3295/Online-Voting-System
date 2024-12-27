@@ -1,9 +1,10 @@
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\JdbcVoteDao.java
-C:\Users\Ayus\Desktop\onlinevotingsystem\src\main\java\com\example\voting\VoteServiceImpl.java
+C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\VoteServiceImpl.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\RegisterServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\Vote.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\GetDetailedResultsServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\UserService.java
+C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\UpdateVoterProfileServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\UserDao.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\VoteService.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\AdminLoginServlet.java
@@ -16,9 +17,7 @@ C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\JdbcU
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\DatabaseConnectionTest.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\RegisterCandidateServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\VoteServlet.java
-C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\ChangePasswordServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\VoteDao.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\AddAdminServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\GetCompiledResultsServlet.java
 C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\SetElectionModeServlet.java
-C:\Users\Ayush\Desktop\onlinevotingsystem\src\main\java\com\example\voting\UpdateProfileServlet.java
