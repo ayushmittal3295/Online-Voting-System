@@ -12,7 +12,7 @@ public class DaoTest {
 
     @Test
     public void testLoginValidation() throws SQLException {
-        String sql = "SELECT * FROM admin WHERE username='Aafi' AND password='password123'";
+        String sql = "SELECT * FROM admin WHERE username='Ayush' AND password='password123'";
         ResultSet rs = Dao.loginValidation(sql);
         assertTrue(rs.next());
     }
@@ -20,7 +20,7 @@ public class DaoTest {
     @Test
     public void testAdminValid() throws SQLException {
         Model model = new Model();
-        model.setUserName("Aafi");
+        model.setUserName("Ayush");
         model.setPass("password123");
         ResultSet rs = Dao.adminValid(model);
         assertTrue(rs.next());
