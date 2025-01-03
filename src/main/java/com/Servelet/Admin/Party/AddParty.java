@@ -1,4 +1,4 @@
-package com.Controller.Admin.Party;
+package com.Servlets.Admin.Party;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mukul
-  Date: 09-05-2021
-  Time: 22:04
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,16 +5,18 @@
     <link href="css/body.css" rel='stylesheet' type='text/css' />
     <script type="text/javascript" src="js/formValidation.js"></script>
 </head>
-<body >
-<script type="text/javascript">
-    <% String message=request.getParameter("msg");
-                            if(message!=null){
-                            if(message.equals("date"))%>
-
-    alert("Please enter valid date! You should be 18 to give vote");
-    window.location.href="register.jsp";
-    <%}%>
-</script>
+<body>
+<% 
+    String message = request.getParameter("msg");
+    if (message != null && message.equals("date")) { 
+%>
+    <script type="text/javascript">
+        alert("Please enter valid date! You should be 18 to give vote");
+        window.location.href = "register.jsp";
+    </script>
+<% 
+    } 
+%>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="limiter">
     <div class="container-login100">

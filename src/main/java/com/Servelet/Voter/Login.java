@@ -1,4 +1,4 @@
-package com.Controller.Voter;
+package com.Servlets.Voter;
 
 import java.io.IOException;
 import java.sql.ResultSet;

@@ -1,5 +1,5 @@
 
-package com.Controller.Contact;
+package com.Servlets.Contact;
 
 import java.io.IOException;
 

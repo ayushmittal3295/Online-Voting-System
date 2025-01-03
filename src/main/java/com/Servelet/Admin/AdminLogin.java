@@ -1,7 +1,4 @@
-package com.Controller.Admin;
-
-import com.Dao.Dao;
-import com.Model.Model;
+package com.Servlets.Admin;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -12,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.Dao.Dao;
+import com.Model.Model;
 
 @WebServlet(name = "AdminLogin", value="/AdminLogin")
 public class AdminLogin extends HttpServlet {

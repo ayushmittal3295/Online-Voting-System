@@ -1,14 +1,15 @@
-package com.Controller.Admin.Voters;
+package com.Servlets.Admin.Voters;
 
-import com.Dao.Dao;
-import com.Model.Model;
+import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+
+import com.Dao.Dao;
+import com.Model.Model;
 
 @WebServlet(name ="Voters",value = "/Voters")
 public class Voters extends HttpServlet {
