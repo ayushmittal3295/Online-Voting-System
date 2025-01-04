@@ -121,7 +121,7 @@ CREATE TABLE voter (
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Aafi04/onlinevotingsystem.git
+   git clone https://github.com/ayushmittal3295/Online-Voting-System.git
    ```
    
 2. **Set up the development environment:**
