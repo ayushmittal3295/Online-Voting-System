@@ -204,7 +204,7 @@ Unit tests are created using JUnit. To run the tests:
 1. **Navigate to the test directory:**
 
    ```bash
-   cd src/test/java/com/onlinevoting/test
+   cd src/test/java/com/Online-Voting/test
    ```
 
 2. **Run the tests:**
